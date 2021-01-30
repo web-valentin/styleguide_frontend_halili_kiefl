@@ -1,0 +1,579 @@
+/*Normalize*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img { 
+    border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;
+    font-weight:normal;
+}
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;}
+a {
+    text-decoration: none;
+}
+
+/*--------------------------------------------*/
+
+/* Basic Styleguide */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    margin-left: 22rem;
+    margin-right: 2rem;
+}
+
+/*--------------------------------------------*/
+
+/* Nav */
+
+.main-nav {
+    background-color: #384750;
+    color:white;
+    width: 20rem;
+    padding-top: 30px;
+    height: 100vh;
+    position: fixed;
+
+}
+
+.main-nav__links {
+    color: white;
+}
+
+.main-nav__headings {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.main-nav__content {
+    font-size: 1rem;
+    margin-left: 25px;
+    padding: 5px;
+}
+
+/*--------------------------------------------*/
+
+/* Main */
+
+.overview__headings {
+    font-size: 1.5rem;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.overview__sub-headings {
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.overview__text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*--------------------------------------------*/
+
+/* Farben */
+.colors {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.colors__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.colors__heading {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.colors__text {
+    margin-top: auto;
+    margin-bottom: auto;
+    min-width: 70%;
+}
+
+.colors__dot {
+    min-height: 7rem;
+    min-width: 7rem;
+    border-radius: 50%;
+    border: 10px solid black;
+    display: inline-block;
+}
+
+.colors__dot--color0 {
+    background-color: #1C1C1C;
+}
+
+.colors__dot--color1 {
+    background-color: #20262A;
+}
+
+.colors__dot--color2 {
+    background-color: #384750;
+}
+
+.colors__dot--color4 {
+    background-color: #A9DBA8;
+}
+
+.colors__dot--color6 {
+    background-color: #FFFFFF;
+}
+
+.colors__dot--color3 {
+    background-color: #26849A;
+}
+
+.colors__dot--color5 {
+    background-color: #C9C9C9;
+}
+
+.test {
+    display: inline;
+}
+
+/*--------------------------------------------*/
+
+/* Naming Konventionen */
+
+.naming-table {
+    background-color:#C9C9C9;
+    table-layout: fixed;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px; 
+}
+
+.naming-table__head {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left:3px solid #384750;
+}
+
+.naming-table__data {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    line-height: 1.5;
+
+}
+
+/*--------------------------------------------*/
+
+/* Server-Leiste */
+
+.server-leiste {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1C1C1C;
+    width: 70px;
+    height: 550px;
+}
+
+.server-leiste__dot {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #384750; 
+    margin-top: 10px;
+    cursor: pointer; 
+}
+
+.server-leiste__dot--active {
+    border: 5px solid #A9DBA8;
+}
+
+.server-leiste__home {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #384750;
+    margin-top: 10px;
+    cursor: pointer; 
+}
+
+.server-leiste__add {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #384750;
+    margin-top: 10px; 
+    justify-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 20px;
+    cursor: pointer; 
+}
+
+.server-leiste__home-icon {
+    margin-left: 0.8rem;
+    margin-top: 1rem;
+    color: #A9DBA8;
+}
+
+.server-leiste__add-icon {
+    margin-left: 0.95rem;
+    margin-top: 1.05rem;
+    color: #A9DBA8;
+}
+
+.server-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.server-table__heading {
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.server-table__heading-1 {
+    padding-bottom: 20px;
+}
+
+.server-table__data {
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    line-height: 1.5;
+}
+
+.codepen {
+    margin-top: 20px;
+}
+
+/*--------------------------------------------*/
+
+/* Warteschlange */
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #384750;
+    width: 230px;
+    height: 550px;
+    font-size: 14px;
+}
+
+.playlist__name {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C9C9C9;
+    width: 100%;
+    text-align: center;
+}
+
+.playlist__icon {
+    color:white;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.playlist__main {
+    width:100%;
+    color: white;
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.playlist__song {
+    width:100%;
+    color: white;
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #20262A;
+    border-bottom: 1px solid #C9C9C9;
+}
+
+.playlist__song--next {
+    color: #C9C9C9;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+
+.playlist__song:hover {
+    background-color: #384750; 
+}
+
+/*--------------------------------------------*/
+
+/* Musikbar */
+
+.musikbar {
+    height: 100px;
+    width: 100%;
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.musikbar__title-cover {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.musikbar__cover {
+    width: 50px;
+    height: 50px;
+    background-color: #384750;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.musikbar__icon {
+    color: #A9DBA8;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.musikbar__titel {
+    color: white;
+    align-items: center;
+}
+
+.musikbar__titel-next {
+    font-size: 12px;
+    color: #C9C9C9;
+}
+
+.musikbar__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 10px;
+}
+
+.musikbar__speach {
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: #384750;
+    border: none;
+    border-radius: 30%;
+    color: #A9DBA8;
+    width:40px;
+    height: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.musikbar__link {
+    cursor: pointer;
+    background-color: #384750;
+    border: none;
+    border: 1px solid #1C1C1C;
+    border-radius: 50%;
+    color: #A9DBA8;
+    width:50px;
+    height: 50px;
+    position: absolute;
+}
+.musikbar__search {
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: #384750;
+    border: none;
+    border-radius: 30%;
+    color: #A9DBA8;
+    width:40px;
+    height: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.musikbar__bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 15px;
+}
+
+.musikbar__runtime {
+    color:#C9C9C9;
+    font-size: 12px;
+}
+
+.musikbar__endtime {
+    color:#C9C9C9;
+    font-size: 12px;
+}
+
+.musikbar__run {
+    width: 150px;
+    height: 5px;
+    background-color: #C9C9C9;
+    margin-left: 10px;
+}
+
+.musikbar__end {
+    width: 300px;
+    height: 5px;
+    background-color: #384750;
+    margin-right: 10px;
+}
+
+.musikbar__sound {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #A9DBA8;
+}
+
+.musikbar__soundnow {
+    width: 35px;
+    height: 5px;
+    background-color: #C9C9C9;
+    margin-left: 10px;
+}
+
+.musikbar__soundmax {
+    width: 60px;
+    height: 5px;
+    background-color: #384750;
+    margin-right: 20px;
+}
+
+/*--------------------------------------------*/
+
+/* Chat */
+
+.chat {
+    width: 100%;
+    height: 550px;
+    background-color: #20262A;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.chat__heading {
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.chat__img {
+    width: 25px;
+    height: 25px;
+    background-color: #C9C9C9;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.chat__user {
+    margin-left: 30px;
+    margin-top: 20px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.chat__username {
+    color: #26849A;
+}
+
+.chat__username--current {
+    color: #A9DBA8;
+}
+
+.chat__message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-left: 70px;
+    margin-top: 5px;
+}
+
+.chat__add {
+    height: 30px;
+    width: 93%;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #384750;
+    justify-self: flex-end;
+    margin: auto;
+    margin-bottom: 20px;
+    border: none;
+    color: #26849A;
+    padding-left: 20px;
+}
+
+#chat {
+    margin-bottom: 30px;
+}

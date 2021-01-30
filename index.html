@@ -1,1 +1,333 @@
-<h1>HELLO</h1><h1>HELLO</h1>
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d892856dbe.js" crossorigin="anonymous"></script>
+        <title>Titel</title>
+    </head>
+    <body>
+        <nav class="main-nav">
+            <h2 class="main-nav__headings">Brand Guide</h2>
+            <ul>
+                <li class="main-nav__content"><a href="#einleitung" class="main-nav__links">Einleitung</a></li>
+                <li class="main-nav__content"><a href=#farben class="main-nav__links">Farben</a></li>
+            </ul>
+            <h2 class="main-nav__headings">CSS-Methologie</h2>
+            <ul>
+                <li class="main-nav__content"><a href="#code-konventionen" class="main-nav__links">Code-Konventionen</a></li>
+                <li class="main-nav__content"><a href="#class-konventionen" class="main-nav__links">Class-Naming-Konvention</a></li>
+            </ul>
+            <h2 class="main-nav__headings">Component-Library</h2>
+            <ul>
+                <li class="main-nav__content"><a href="#server-leiste" class="main-nav__links">Server-Leiste</a></li>
+                <li class="main-nav__content"><a href="#warteschlange" class="main-nav__links">Warteschlange</a></li>
+                <li class="main-nav__content"><a href="#musikbar" class="main-nav__links">Musikbar</a></li>
+                <li class="main-nav__content"><a href="#chat" class="main-nav__links">Chat</a></li>
+            </ul>
+        </nav>
+        <div class="overview">
+            <section class="brandguide">
+                <h2 class="overview__headings">Brandguide YouRadio</h2>
+                <p class="overview__text">YouRadio ist eine Applikation, in der man sich seinen eigenen “Radiosender”
+                gemeinsam mit anderen Menschen erstellen kann, um mit denen den Konsum von Audio genießen
+                zu können. Die Playlist wird von den Mitgliedern des “Radiosender”-Servers verwaltet. 
+                “Radiosender” besser definiert: ein Server, auf dem eine Playlist von Liedern und Sprachnachrichten in Realtime abgespielt wird.
+                </p>
+                <section id="einleitung">
+                    <h3 class="overview__sub-headings">Einleitung</h3>
+                    <p class="overview__text">Dies ist der Styleguide für das Web-Projekt YouRadio. Er beinhaltet neben den zu wählenden Farben, auch
+                    Beschreibungen der anzuwendenden CSS-Methologie und deren Class-Naming-Konvention. 
+                    Des Weiteren werden Code- und styling Beispiele von elementaren Komponenten dargestellt.
+                    </p>
+                </section>
+                <section id="farben">
+                    <h3 class="overview__sub-headings">Farben</h3>
+                    <p class="overview__text">Für das Projekt YouRadio sind folgende Farben zu verwenden</p>
+                    <div class="colors">
+                        <div class="colors__container">
+                            <span class="colors__dot colors__dot--color0"></span>
+                            <h4 class="colors__heading">#1C1C1C</h4>
+                            <p class="colors__text">Diese Farbe wird für die Navigation in der Serverleiste, sowie in der Musik-Playbar verwendet</p>
+                        </div>
+                        <div class="colors__container">
+                            <span class="colors__dot colors__dot--color1"></span>
+                            <h4 class="colors__heading">#20262A</h4>
+                            <p class="colors__text">Diese Farbe wird für Hintergründe in Chat und Buttons verwendet</p>
+                        </div>
+                        <div class="colors__container">
+                            <span class="colors__dot colors__dot--color2"></span>
+                            <h4 class="colors__heading">#384750</h4>
+                            <p class="colors__text">Diese Farbe wird für Hintergründe in Seitenmenüs verwendet</p>
+                        </div>
+                        <div class="colors__container">
+                            <span class="colors__dot colors__dot--color3"></span>
+                            <h4 class="colors__heading">#26849A</h4>
+                            <p class="colors__text">Diese Farbe wird für Usernamen im Chat verwendet</p>
+                        </div>
+                        <div class="colors__container">
+                            <span class="colors__dot colors__dot--color4"></span>
+                            <h4 class="colors__heading">#A9DBA8</h4>
+                            <p class="colors__text">Diese Farbe wird für klickbare Elemente</p>
+                        </div>
+                        <div class="colors__container">
+                            <span class="colors__dot colors__dot--color5"></span>
+                            <h4 class="colors__heading">#C9C9C9</h4>
+                            <p class="colors__text">Diese Farbe wird für Texte die "ausgegraut" sind verwendet</p>
+                        </div>
+                        <div class="colors__container">
+                            <span class="colors__dot colors__dot--color6"></span>
+                            <h4 class="colors__heading">#FFFFFF</h4>
+                            <p class="colors__text">Diese Farbe wird für Texte verwendet</p>
+                        </div>
+                        
+                        
+                    </div>
+                </section>
+            </section>
+            <section class="css-methologie">
+                <h2 class="overview__headings">CSS-Methologie</h2>
+                <p class="overview__text">Im Projekt YouRadio wird zum strukturierten Aufbau des CSS BEM angewandt. Was bedeutet das? BEM steht für Block, Element, Modifier.
+                Blöcke sind HTML-Einheiten die unabhängig von ihrem Einsatzort existieren. Beispiele dafür sind "header" oder "footer". Elemente dagegen sind 
+                Teile eines Blocks die immer an einen Block gebunden sind. Beispielsweise existiert ein List-Item innerhalb einer Liste. Der letzte Teil des BEM-Konzepts
+                steht für Modifier, das sind "Flags" an Blöcken oder Elementen, die deren Aussehen oder Verhalten ändern. Zum Beispiel
+                "disabled" oder "checked".
+                </p>
+                <p class="overview__text">
+                Wir verwenden BEM, zum Einen aufgrund der Modularität, denn bei der BEM-Struktur wird nur mit Klassen gearbeitet und die verwendeten Blöcke sind nie voneinander abhängig. Dementsprechend kommt es zu keinen Problemenen mit Cascading und Spezifität. Die Unabhängigkeit der Blöcke
+                macht den Code wiederverwendbar und wartbarer. Zuletzt ist die BEM-Struktur sehr einfach zu verstehen und einzusetzen.
+                Quelle: http://getbem.com/introduction/ , https://de.wikipedia.org/wiki/Block,_Element,_Modifier
+                </p>
+                <section id="code-konventionen">
+                    <h3 class="overview__sub-headings">Code-Naming-Konventionen</h3>
+                    <h4>Preprocessor, File-Struktur und CSS-Reset</h4>
+                    <p class="overview__text">Im Projekt YouRadio wird SASS/SCSS verwendet. Es wird das 7-1 Pattern angewandt um das SCSS zu strukturieren. Das bedeutet es
+                            gibt die Ordner "base, components, layout, pages, themes, abstracts und vendors". Die Files werden dann in einer 
+                            main.scss gesammelt. Es wird CSS-Normalize angewandt um eine gemeinsame Basis für Styling zu schaffen.</p>
+                </section>
+                <section id="class-konventionen">
+                    <h3 class="overview__sub-headings">Class-Naming-Konventionen</h3>
+                    <p class="overview__text">Klassen werden grundsätzlich klein geschrieben und englisch benannt.</p>
+                    <h4>Block</h4>
+                    <p class="overview__text">Ein Block ist eine alleinstehendes Entity, die nicht von anderen Elementen abhängt.</p>
+                    <table class="naming-table">
+                        <tr>
+                            <th class="naming-table__head">Naming</th>
+                            <th class="naming-table__head">HTML</th>
+                            <th class="naming-table__head">CSS</th>
+                        </tr>
+                        <tr>
+                            <td class="naming-table__data">
+                                Blöcke werden klein geschrieben. Dabei wird darauf geachtet, dass keine "__" im Namen vorkommen.
+                            </td>
+                            <td class="naming-table__data">
+                                Jeder DOM-Knoten, der eine Klasse besitzt kann ein Block sein. Wichtig es werden zum stylen nur Klassen vergeben.
+                            </td>
+                            <td class="naming-table__data">
+                                Die Blöcke werden ausschließlich mit Klassennamen angesprochen. Es ist wichtig, dass beim styling weder CSS, noch
+                                Tags verwendet werden.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="naming-table__data">Beispiel: <code>.block</code></td>
+                            <td class="naming-table__data">Beispiel: <code>&ltsection class="feed">&lt/section></code></td>
+                            <td class="naming-table__data">Beispiel: <code>.feed { color:green;}</code></td>
+                        </tr>
+                    </table>
+                    <h4>Element</h4>
+                    <p class="overview__text">Elemente sind Teile von Blöcken, die an Ihren Block gebunden sind.</p>
+                    <table class="naming-table">
+                        <tr>
+                            <th class="naming-table__head">Naming</th>
+                            <th class="naming-table__head">HTML</th>
+                            <th class="naming-table__head">CSS</th>
+                        </tr>
+                        <tr>
+                            <td class="naming-table__data">
+                                Elemente werden klein geschrieben. Der Klassenname wird so gewählt: "Blockname" + "__" + "Elementname"
+                            </td>
+                            <td class="naming-table__data">
+                                Jeder DOM-Knoten, der eine Klasse besitzt und innerhalb eines Blocks ist kann ein Elementen sein. Wichtig es werden zum stylen nur Klassen vergeben.
+                            </td>
+                            <td class="naming-table__data">
+                                Die Elemente werden nur einzeln und direkt per Klasse angesprochen. So entsteht keine Hierarchie.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="naming-table__data">Beispiel: <code>.feed__post</code></td>
+                            <td class="naming-table__data">Beispiel: <code>&ltsection class="feed">&ltdiv class="feed__post">&lt/div>&lt/section></code></td>
+                            <td class="naming-table__data">Beispiel: <code>.feed__post { color:green;}</code></td>
+                        </tr>
+                    </table>
+                    <h4>Modifier</h4>
+                    <p class="overview__text">Modifier sind Flags an Elementn oder Blöcken, die deren Aussehen oder Zustand verändern.</p>
+                    <table class="naming-table">
+                        <tr>
+                            <th class="naming-table__head">Naming</th>
+                            <th class="naming-table__head">HTML</th>
+                            <th class="naming-table__head">CSS</th>
+                        </tr>
+                        <tr>
+                            <td class="naming-table__data">
+                                Modifier werden klein geschrieben. Der Klassenname wird so gewählt: "Blockname" + "__" + "Elementname" + "--" + "Modifiername" oder "Blockname" + "--" + "Modifiername".
+                            </td>
+                            <td class="naming-table__data">
+                                Modifier sind extra Klassennamen die zu jedem Block oder Element hinzugefügt werden können.
+                            </td>
+                            <td class="naming-table__data">
+                                Modifier werden einzeln und direkt per Klasse angesprochen. So entsteht keine Hierarchie.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="naming-table__data">
+                                Beispiel: <code>.feed__post--color-blue</code>
+                            </td>
+                            <td class="naming-table__data">
+                                Beispiel: <code>&ltsection class="feed">&ltdiv class="feed__post--color-blue">&lt/div>&lt/section></code>
+                            </td>
+                            <td class="naming-table__data">
+                                Beispiel: <code>.feed__post--color-blue { color:green;} </code> 
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+            <section class="component-library">
+                <h2 class="overview__headings">Component-Library</h2>
+                <section id="server-leiste">
+                    <h3 class="overview__sub-headings">Serverleiste</h3>
+                    <table class="server-table">
+                        <tr class="server-table__row">
+                            <th class="server-table__heading-1">Design</th>
+                            <th class="server-table__heading">Beschreibungen & Code-Beispiel</th>
+                        </tr>
+                        <tr class="server-table__row">
+                            <td>
+                                <div class="server-leiste">
+                                    <buttons class="server-leiste__home"><i class="server-leiste__home-icon fas fa-home fa-lg"></i></buttons>
+                                    <buttons class="server-leiste__dot"></buttons>
+                                    <buttons class="server-leiste__dot server-leiste__dot--active"></buttons>
+                                    <buttons class="server-leiste__dot"></buttons>
+                                    <buttons class="server-leiste__dot"></buttons>
+                                    <buttons class="server-leiste__add"><i class="server-leiste__add-icon fas fa-plus fa-lg"></i></buttons>
+                                </div>
+                            </td>
+                            <td class="server-table__data">Wichtige Merkmale für die Serverleiste: Die Farbkombinationen sind wie im Bereich Farben einzuhalten. Die dunkel Buttons werden im Use-Case mit Nutzerbildern gefüllt.
+                                Der aktuelle Server wird mit einer helgrünen Border (Active State) am linken Rand gekennzeichnet. Die Buttons haben keinen Hover-State.
+                                <div class="codepen">
+                                    <p class="codepen" data-height="342" data-theme-id="dark" data-default-tab="css" data-user="web-valentin" data-slug-hash="vYyYqxX" style="height: 342px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vYyYqxX">
+                                        <span>See the Pen <a href="https://codepen.io/web-valentin/pen/vYyYqxX">
+                                        vYyYqxX</a> by web-valentin (<a href="https://codepen.io/web-valentin">@web-valentin</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section id="warteschlange">
+                    <h3 class="overview__sub-headings">Warteschlange</h3>
+                    <table class="server-table">
+                        <tr class="server-table__row">
+                            <th class="server-table__heading-1">Design</th>
+                            <th class="server-table__heading">Beschreibungen & Code-Beispiel</th>
+                        </tr>
+                        <tr class="server-table__row">
+                            <td>
+                                <div class="playlist">
+                                    <buttons class="playlist__name">Playlistname<i class="server-leiste__home-icon fas fa-arrow-down"></i></buttons>
+                                    <buttons class="playlist__main"><i class="playlist__icon fas fa-list-ul"></i>Warteschlange</buttons>
+                                    <buttons class="playlist__song"><i class="playlist__icon fas fa-music"></i>Interpret - Titel<span class="playlist__song--next">next</span></buttons>
+                                    <buttons class="playlist__song"><i class="playlist__icon fas fa-music"></i>Interpret - Titel</buttons>
+                                    <buttons class="playlist__song"><i class="playlist__icon fas fa-music"></i>Interpret - Titel</buttons>
+                                    <buttons class="playlist__song"><i class="playlist__icon fas fa-music"></i>Interpret - Titel</buttons>
+                                </div>
+                            </td>
+                            <td class="server-table__data">Wichtige Merkmale bei der Warteschlange: Die Farbkombinationen sind so wie im Beispiel zu wählen. Der nächste Titel hat einen next-state. Dabei erscheint ein kleines next
+                                neben dem Titel. Die Songs in der Playlist haben einen Hover-State. Die Plalist ist Drop-Down. Bei einem klick auf den
+                                Playlistnamen verschwindet die Playlist. Diese Funktionalität ist mit JS zu implementieren.
+                                <div class="codepen">
+                                        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css" data-user="web-valentin" data-slug-hash="OJbJKLE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="OJbJKLE">
+                                                <span>See the Pen <a href="https://codepen.io/web-valentin/pen/OJbJKLE">
+                                                OJbJKLE</a> by web-valentin (<a href="https://codepen.io/web-valentin">@web-valentin</a>)
+                                                on <a href="https://codepen.io">CodePen</a>.</span>
+                                              </p>
+                                              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <div id="musikbar">
+                    <h3 class="overview__sub-headings">Musikbar</h3>
+                    <div class="musikbar">
+                        <div class="musikbar__title-cover">
+                            <span class="musikbar__cover"><i class="musikbar__icon fas fa-music"></i></span>
+                            <div class="musikbar__titel">
+                                <div class="musikbar__titel-now">Interpret-Titel</div>
+                                <div class="musikbar__titel-next">next: Interpret-Titel</div>
+                            </div>
+                        </div>
+                        <div class="musikbar__main">
+                            <div class="musikbar__buttons">
+                                <button class="musikbar__speach"><i class="fas fa-microphone-alt"></i></button>
+                                <button class="musikbar__link"><i class="fas fa-plus fa-lg"></i></button>
+                                <button class="musikbar__search"><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="musikbar__bar">
+                                <div class="musikbar__runtime">0.54</div>
+                                <div class="musikbar__run"></div>
+                                <div class="musikbar__end"></div>
+                                <div class="musikbar__endtime">3.23</div>
+                            </div>
+                        </div>
+                            <div class="musikbar__sound">
+                                <i class="fas fa-volume-up"></i>
+                                <div class="musikbar__soundnow"></div>
+                                <div class="musikbar__soundmax"></div>
+                            </div>
+                    </div>
+                </div>
+                <p class="overview__text">Bei der Musikbar ist es wichtig die Farbkonventionen einzuhalten. Sowie die richtige Verwendung der Icons. Bei Klick auf den Lautsprecher ändert der Lautsprecher sich in einen Mute-State.</p>
+                <div class="codepen">
+                        <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css" data-user="web-valentin" data-slug-hash="OJbJKLE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="OJbJKLE">
+                                <span>See the Pen <a href="https://codepen.io/web-valentin/pen/OJbJKLE">
+                                OJbJKLE</a> by web-valentin (<a href="https://codepen.io/web-valentin">@web-valentin</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                              </p>
+                              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                </section>
+                <section id="chat">
+                    <h3 class="overview__sub-headings">Chat</h3>
+                    <div class="chat">
+                        <h2 class="chat__heading">Radio Chat Section</h2>
+                        <div class="chat__user"><span class="chat__img"></span><span class="chat__username chat__username--current">Username</span></div>
+                        <div class="chat__message">Chat-MessageChat-MessageChat-MessageChat-MessageChat-Message</div>
+                        <div class="chat__user"><span class="chat__img"></span><span class="chat__username">Username</span></div>
+                        <div class="chat__message">Chat-MessageChat-MessageChat-Message</div>
+                        <div class="chat__user"><span class="chat__img"></span><span class="chat__username">Username</span></div>
+                        <div class="chat__message">Chat-MessageChat-MessageChat-MessageChat-MessageChat-MessageChat-Message</div>
+                        <div class="chat__user"><span class="chat__img"></span><span class="chat__username">Username</span></div>
+                        <div class="chat__message">Chat-Message</div>
+                        <input type="text" class="chat__add" value="Type Text"></input>
+                    </div>
+                    <p class="overview__text">Bei der Chat-Section ist es wichtig auf den Einsatz der Fraben zu achten. Die grauen Kreise werden mit den Bildern der User gefüllt. Die Input-Leiste reagiert auf "Enter"</p>
+                    <div class="codepen">
+                            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css" data-user="web-valentin" data-slug-hash="OJbJKLE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="OJbJKLE">
+                                    <span>See the Pen <a href="https://codepen.io/web-valentin/pen/OJbJKLE">
+                                    OJbJKLE</a> by web-valentin (<a href="https://codepen.io/web-valentin">@web-valentin</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                  </p>
+                                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                </section>                
+            </section>
+        </div>
+    </body>
+</html>
